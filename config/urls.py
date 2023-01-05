@@ -10,7 +10,7 @@ schema_view = get_schema_view(
         title="pybo",  # 타이틀
         default_version='v1.0.0',   # 버전
         description="pybo",   # 설명
-        terms_of_service="https://cholol.tistory.com/551",
+        terms_of_service="",
         contact=openapi.Contact(email="hjh4212@naver.com")
 ),
     validators=['flex'],
@@ -20,7 +20,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('pybo/', include('pybo.urls')), 
+    path('home/', include('pybo.urls')), 
     path('common/', include('common.urls')),
     path('', base_views.index, name='index'),  # '/' 에 해당되는 path
     
